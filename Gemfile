@@ -24,7 +24,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'mimemagic', '0.3.7'
 
 
 # Reduces boot times through caching; required in config/boot.rb
