@@ -14,16 +14,18 @@
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-
-    <% if logged_in? %>
-      <%= link_to "マイページ", user_path(current_user.id) %>
-      <%= link_to "投稿一覧", blogs_path %>
-      <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "アカウント作成", new_user_path %>
-      <%= link_to "ログイン", new_session_path %>
-    <% end %>
-
+    <header>
+      <% if logged_in? %>
+        <%= link_to "マイページ", user_path(current_user.id) ,class:"header"%>
+        <%= link_to "投稿一覧", blogs_path ,class:"header"%>
+        <%= link_to "ログアウト", session_path(current_user.id), method: :delete,class:"header" %>
+      <% else %>
+        <%= link_to "アカウント作成", new_user_path,class:"header" %>
+        <%= link_to "ログイン", new_session_path,class:"header" %>
+      <% end %>
+      <div><img src="/assets/FacebookClone.png" class="logo"></div>
+    </header>
     <%= yield %>
+    <footer> @ facebook clone inc. </footer>
   </body>
 </html>
