@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<h1>投稿一覧</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= blog.image %></td>
         <td><%= blog.content %></td>
         <td><%= blog.user.name %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', blog %></td>
+        <td><%= link_to '編集', edit_blog_path(blog) %></td>
+        <td><%= link_to '削除', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to '新しく投稿を作成する', new_blog_path %>
