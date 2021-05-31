@@ -7,15 +7,14 @@
   <div class="row">
     <% @blogs.each do |blog| %>
       <div class="col-md-offset-3 col-md-6 col-md-offset-3 post-area"><%= image_tag blog.image.url,size: "200x200",class:"image-area" %>
-      </div>
-      <div class="col-md-offset-3 col-md-6 col-md-offset-3  post-area"><%= "content:"%><%= blog.content %>
-      </div>
-      <div class="col-md-offset-3 col-md-6 col-md-offset-3 post-area"><%= "user name:"%><%= blog.user.name %>
-      </div>
-      <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        <td><%= link_to '詳細', blog,class:"btn"%></td>
-        <td><%= link_to '編集', edit_blog_path(blog),class:"btn" %></td>
-        <td><%= link_to '削除', blog, method: :delete, data: { confirm: 'Are you sure?' },class:"btn" %></td>
+      <br>
+      <%= "content:"%><%= blog.content %>
+      <br>
+      <%= "user name:"%><%= blog.user.name %>
+      <br>
+      <%= link_to '詳細', blog,class:"btn"%>
+      <%= link_to '編集', edit_blog_path(blog),class:"btn" %>
+      <%= link_to '削除', blog, method: :delete, data: { confirm: 'Are you sure?' },class:"btn" %>
       </div>
     <% end %>
   </div>
