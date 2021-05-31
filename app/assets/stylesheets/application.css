@@ -24,7 +24,7 @@
  body {
    text-align: center;
 
-   height: 100%;
+   height: 150%;
    background-color: #F7F8F8;
  }
 
@@ -65,4 +65,5 @@ footer {
   bottom: 0;
   display: table;
   color: white;
+  position: fixed;
 }
