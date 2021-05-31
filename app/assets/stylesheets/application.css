@@ -64,6 +64,6 @@ footer {
   background-color: black;
   bottom: 0;
   color: white;
-  position: absolute;
+  position: fixed;
   margin: auto;
 }
