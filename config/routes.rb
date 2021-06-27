@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+  get 'relationships/destroy'
   get '/',to: "blogs#index"
   resources :blogs do
     collection do
@@ -8,5 +10,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
   resources :favorites, only: [:create, :destroy]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :relationships, only: [:create, :destroy]
 end
